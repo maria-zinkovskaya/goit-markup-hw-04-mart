@@ -32,12 +32,12 @@ html {
   display: flex;
   padding-bottom: 111px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.site-header .container {
+/*.site-header .container {
   display: flex;
-}
+}*/
 
 .header-nav {
   display: flex;
