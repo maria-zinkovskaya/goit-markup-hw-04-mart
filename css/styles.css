@@ -35,10 +35,6 @@ html {
   justify-content: space-around;
 }
 
-/*.site-header .container {
-  display: flex;
-}*/
-
 .header-nav {
   display: flex;
   justify-content: space-between;
