@@ -30,18 +30,22 @@ html {
 
 .site-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-bottom: 111px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-header .container {
   display: flex;
 }
 
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .logo {
-  width: 190px;
-  height: 42px;
   font-size: 30px;
   letter-spacing: -1px;
   line-height: 32px;
@@ -49,16 +53,25 @@ html {
   font-weight: 300;
   margin: 0;
   padding-top: 38px;
+  text-decoration: none;
 }
 
 .logo::first-letter {
-  width: 190px;
-  height: 42px;
   font-size: 30px;
   letter-spacing: -1px;
   line-height: 32px;
   color: #1abc9c;
   font-weight: 900;
+}
+
+.site-nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-top: 43px;
+  list-style: none;
+  text-decoration: none;
+  margin-left: auto;
 }
 
 .header-nav-list .link {
@@ -78,16 +91,6 @@ html {
 .header-nav-list .link:hover,
 .header-nav-list .link:focus {
   color: #1abc9c;
-}
-
-.site-nav {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  padding-top: 43px;
-  list-style: none;
-  text-decoration: none;
-  margin-left: auto;
 }
 
 /*Section*/
@@ -113,18 +116,23 @@ html {
 }
 
 .gallery-items {
-   display: flex;
-   margin-right: 30px;
-   margin-bottom: 30px;
-  
+  display: flex;
+  margin-right: 30px;
+  margin-bottom: 30px;
   flex-basis: calc(25% - 30px);
 }
 .gallery-link {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery-items:nth-child(4n) {
   margin-right: 0;
+}
+
+.gallery-items:nth-last-child(-n + 4) {
+  margin-bottom: 0;
 }
 
 .item-information {
@@ -165,6 +173,14 @@ html {
   margin-bottom: 0;
 }
 
+.gallery-link:hover .item-information .gallery-description {
+  background-color: #1abc9c;
+}
+
+.gallery-link:hover .item-information .price {
+  background-color: #7fd9c7;
+}
+
 /* News*/
 
 .news-title {
@@ -175,8 +191,8 @@ html {
   color: #515151;
   font-family: "Roboto";
   font-weight: 900;
-  margin-top: 0;
-  margin-bottom: 120px;
+  margin-top: 105px;
+  *margin-bottom: 120px;
   text-align: center;
 }
 .news-list {
